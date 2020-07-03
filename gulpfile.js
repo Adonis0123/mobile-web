@@ -2,13 +2,13 @@ const gulp = require('gulp')
 const GulpSSH = require('gulp-ssh')
 
 // 需要上传到服务器的路径
-const remotePath = '/home/app/uduhs-web-page-test'
+const remotePath = ''
 const config = {
   ssh: {
-    host: '172.16.128.186',
+    host: '',
     port: 22,
-    username: 'root',
-    password: 'Casking@123'
+    username: '',
+    password: ''
   },
   remotePath,
   commands: [
