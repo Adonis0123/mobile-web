@@ -23,7 +23,6 @@ yarn-error.log*
 *.rar
 *.zip
 package-lock.json
-package.json
 logs/commands.log
 /dist
 /staging
