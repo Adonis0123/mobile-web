@@ -22,6 +22,7 @@ yarn-error.log*
 *.sw?
 *.rar
 *.zip
+gulpfile.js
 package-lock.json
 logs/commands.log
 /dist
