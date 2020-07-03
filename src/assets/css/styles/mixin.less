@@ -1,0 +1,96 @@
+// 背景图片
+.bg-image(@url) {
+  background-image:~"url(@{url}@2x.png)";
+
+  @media (-webkit-min-device-pixel-ratio: 3),
+  (min-device-pixel-ratio: 3) {
+    background-image:~"url(@{url}@3x.png)";
+  }
+}
+
+// 1像素边框
+.border-1px(@color) {
+  position: relative;
+
+  &:after {
+    display   : block;
+    position  : absolute;
+    left      : 0;
+    bottom    : 0;
+    width     : 100%;
+    border-top: 1px solid @color;
+    content   : '';
+  }
+}
+
+// 单行文本超出显示省略号
+.no-wrap() {
+  -ms-text-overflow: ellipsis;
+  text-overflow    : ellipsis;
+  overflow         : hidden;
+  white-space      : nowrap;
+}
+
+// 多行文本超出显示省略号
+.no-wrap-multi(@n) {
+  display           : -webkit-box !important;
+  -ms-text-overflow : ellipsis;
+  text-overflow     : ellipsis;
+  overflow          : hidden;
+  word-break        : break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @n; // 可显示行数
+}
+
+// 扩展点击区域
+.extend-click() {
+  position: relative;
+
+  &:before {
+    content : '';
+    position: absolute;
+    top     : -10px;
+    left    : -10px;
+    right   : -10px;
+    bottom  : -10px;
+  }
+}
+
+// 清楚浮动
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear  : both;
+  }
+}
+
+//点击效果,灰色
+.click-effect() {
+  &:active {
+    background-color: #f2f3f5;
+  }
+}
+
+//点击科室效果
+.click-effect-text() {
+  &:active {
+    background-color: #f2f3f5;
+    color           : var(--color-background-theme);
+  }
+}
+
+
+//点击效果,白色
+.click-effect-fff() {
+  &:active {
+    background-color: #fff;
+  }
+}
+
+
+//ios加速
+.ios-fast() {
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch
+}
