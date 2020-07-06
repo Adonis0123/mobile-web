@@ -1,7 +1,7 @@
 /*
  * @Author: Hzh
  * @Date: 2020-07-03 15:12:46
- * @LastEditTime: 2020-07-03 16:29:05
+ * @LastEditTime: 2020-07-06 14:45:21
  * @LastEditors: Hzh
  * @Description:
  */
@@ -26,20 +26,29 @@ routerFiles.keys().forEach((fileName) => {
   }
 })
 
-// 404 页面必须放在最后！！!
-const errorPage = { path: '*', redirect: '/404', hidden: true }
-routerList.push(errorPage)
+const routes = [
+  {
+    path: '/',
+    name: 'Layout',
+    redirect: '/home',
+    component: () => import('@/layout/index.vue'),
+    children: routerList
+  }
+]
+/*  404 页面必须放在最后！*/
+const errorPage = { path: '*', redirect: '/404' }
+routes.push(errorPage)
+
 // 路由配置
 const RouterConfig = {
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: routerList
+  routes: routes
 }
 
 const router = new VueRouter(RouterConfig)
 
 router.beforeEach(async(to, from, next) => {
-  document.title = to.meta.title
   next()
 })
 export default router

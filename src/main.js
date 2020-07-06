@@ -1,7 +1,7 @@
 /*
  * @Author: Hzh
  * @Date: 2020-06-22 10:12:23
- * @LastEditTime: 2020-07-03 16:42:28
+ * @LastEditTime: 2020-07-06 18:18:23
  * @LastEditors: Hzh
  * @Description:
  */
@@ -23,7 +23,7 @@ import cookie from 'vue-cookie'
 
 // 按需引入
 import {
-  Skeleton, Switch, Picker, NoticeBar, RadioGroup, Radio, ActionSheet, Popup, TreeSelect, Collapse, CollapseItem, Grid, GridItem, DropdownMenu, DropdownItem, Checkbox, CheckboxGroup, SubmitBar, Card, GoodsAction, GoodsActionIcon, GoodsActionButton, PullRefresh, List, Row, Col, Loading, Overlay, Cell, Dialog, CellGroup, Button, Icon, NavBar, Tabbar, TabbarItem, Swipe, SwipeItem, Lazyload, Tab, Tabs, Field, Toast, Search, Form, Area
+  Toast, Search, Tabbar, TabbarItem, Button
 } from 'vant'
 
 //  /* vw 兼容适配 */
@@ -31,14 +31,14 @@ import {
 // const viewportUnitsBuggyfill = require('viewport-units-buggyfill')
 // viewportUnitsBuggyfill.init({ hacks })
 
-/* 移动端调试工具 */
-import Vconsole from 'vconsole'
-if (process.env.NODE_ENV !== 'production') {
-  new Vconsole()
-}
+// /* 移动端调试工具 */
+// import Vconsole from 'vconsole'
+// if (process.env.NODE_ENV !== 'production') {
+//   new Vconsole()
+// }
 
 /* 使用vant组件 */
-Vue.use(Skeleton).use(Switch).use(Picker).use(NoticeBar).use(RadioGroup).use(Radio).use(ActionSheet).use(Popup).use(TreeSelect).use(Collapse).use(CollapseItem).use(Grid).use(GridItem).use(DropdownMenu).use(DropdownItem).use(Checkbox).use(CheckboxGroup).use(SubmitBar).use(Card).use(GoodsAction).use(GoodsActionIcon).use(GoodsActionButton).use(PullRefresh).use(List).use(Row).use(Col).use(Loading).use(Overlay).use(Cell).use(Dialog).use(Button).use(Icon).use(NavBar).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(Lazyload).use(Tab).use(Tabs).use(Field).use(CellGroup).use(Toast).use(Search).use(Form).use(Area)
+Vue.use(Toast).use(Search).use(Tabbar).use(TabbarItem).use(Button)
 /* 使用滑动切换页面组件 */
 Vue.use(VueTouch, { name: 'v-touch' })
 VueTouch.config.swipe = {

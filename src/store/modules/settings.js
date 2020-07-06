@@ -1,13 +1,13 @@
 /*
  * @Author: Hzh
  * @Date: 2020-07-03 15:12:46
- * @LastEditTime: 2020-07-03 16:06:34
+ * @LastEditTime: 2020-07-06 15:11:55
  * @LastEditors: Hzh
  * @Description:
  */
 /* 设置模块 */
 const state = {
-  color: '#1BA79A', // 主题颜色
+  color: '#3B8CFF', // 主题颜色
   keepAlivePage: [] // 需要缓存的页面
 }
 
@@ -30,7 +30,7 @@ const mutations = {
 const actions = {
   getColor({ commit }) {
     return new Promise((resolve, reject) => {
-      commit('GET_COLOR', '#1BA79A')
+      commit('GET_COLOR', '#3B8CFF')
       resolve()
     })
   },
