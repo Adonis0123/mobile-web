@@ -1,14 +1,14 @@
 <!--
  * @Author: Hzh
  * @Date: 2020-07-03 15:54:19
- * @LastEditTime: 2020-07-06 18:22:21
+ * @LastEditTime: 2020-07-07 09:43:12
  * @LastEditors: Hzh
  * @Description:
 -->
 <!--  -->
 <template>
   <van-tabbar v-model="active" fixed route :active-color="themeColor">
-    <van-tabbar-item v-for="(item,index) in tabbars" :key="index" :to="item.url">
+    <van-tabbar-item v-for="(item,index) in tabbars" :key="index" :to="item.path">
       <template #icon="props">
         <icon-svg class="icon" :icon-class="props.active?item.actIcon:item.inActIcon" />
       </template>
@@ -18,13 +18,11 @@
 </template>
 
 <script>
+import mainRoutes from '@/router/modules/mainPage.js'
 export default {
   name: 'FooterNav',
-
   components: {},
-
   props: {},
-
   data() {
     return {
       active: 0,
@@ -32,26 +30,22 @@ export default {
         {
           name: '门诊',
           actIcon: 'shoujiduan-xuanze-menzhen1',
-          inActIcon: 'shoujiduan-xuanze-menzhen1-copy',
-          url: '/outpatient'
+          inActIcon: 'shoujiduan-xuanze-menzhen1-copy'
         },
         {
           name: '住院',
           actIcon: 'shoujiduan-xuanze-zhuyuan',
-          inActIcon: 'shoujiduan-xuanze-zhuyuan-copy',
-          url: '/inpatients'
+          inActIcon: 'shoujiduan-xuanze-zhuyuan-copy'
         },
         {
           name: '消息',
           actIcon: 'shoujiduan-xuanze-kuaisufangwen',
-          inActIcon: 'shoujiduan-xiaoxi-copy',
-          url: '/message'
+          inActIcon: 'shoujiduan-xiaoxi-copy'
         },
         {
           name: '我的',
           actIcon: 'shoujiduan-xuanze-wode',
-          inActIcon: 'shoujiduan-xuanze-wode-copy',
-          url: '/mine'
+          inActIcon: 'shoujiduan-xuanze-wode-copy'
         }
       ]
     }
@@ -61,7 +55,14 @@ export default {
 
   watch: {},
 
-  created() {},
+  created() {
+    const routes = mainRoutes.children
+    for (let i = 0; i < routes.length; i++) {
+      for (let j = 0; j < this.tabbars.length; j++) {
+        this.tabbars[j].path = routes[j].path
+      }
+    }
+  },
 
   mounted() {},
 
