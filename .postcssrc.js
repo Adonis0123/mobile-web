@@ -1,3 +1,10 @@
+/*
+ * @Author: Hzh
+ * @Date: 2020-07-06 09:28:46
+ * @LastEditTime: 2020-07-07 11:33:42
+ * @LastEditors: Hzh
+ * @Description: 
+ */ 
 module.exports = {
   plugins: {
     "postcss-import": {},
@@ -17,9 +24,8 @@ module.exports = {
       minPixelValue: 1, // 小于或等于`1px`不转换为视窗单位，你也可以设置为你想要的值
       mediaQuery: false, // 允许在媒体查询中转换`px`
       replace: true,
-      exclude: /(\/|\\)(node_modules)(\/|\\)/
+      // exclude: /(\/|\\)(node_modules)(\/|\\)/
     },
-    // "postcss-viewport-units":{},
     'postcss-viewport-units': {
       filterRule: rule => rule.selector.includes('::after') && rule.selector.includes('::before')
     },

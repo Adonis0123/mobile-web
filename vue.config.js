@@ -108,7 +108,16 @@ module.exports = {
     sourceMap: false,
     loaderOptions: {
       less: {
-        javascriptEnabled: true
+        // 若使用 less-loader@5，请移除 lessOptions 这一级，直接配置选项。
+        // lessOptions: {
+        modifyVars: {
+          // // 直接覆盖变量
+          // 'text-color': 'red',
+          // 'border-color': '#eee',
+          // 或者可以通过 less 文件覆盖（文件路径为绝对路径）
+          'hack': `true; @import "${resolve('./src/assets/css/styles/vant.less')}";`
+        }
+        // }
       }
     }
   },
