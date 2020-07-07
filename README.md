@@ -2,7 +2,7 @@
 
 ## 简介
 
-[mobile-web] 是一个移动端前端解决方案，它基于 [vue](https://github.com/vuejs/vue) 和 [vant](https://github.com/youzan/vant)实现。它使用了大漠的移动端适配方案，使本项目可以更好的适配各种机型
+[mobile-web](https://github.com/Adonis0123/mobile-web) 是一个移动端前端解决方案，它基于 [vue](https://github.com/vuejs/vue) 和 [vant](https://github.com/youzan/vant)实现。它使用了大漠的移动端适配方案，使本项目可以更好的适配各种机型
 
 
 
