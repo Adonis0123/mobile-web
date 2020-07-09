@@ -6,7 +6,7 @@
 
 
 
-你需要在本地安装 [node](http://nodejs.org/) 和 [git](https://git-scm.com/)。本项目技术栈基于 [ES2015+](http://es6.ruanyifeng.com/)、[vue](https://cn.vuejs.org/index.html)、[vuex](https://vuex.vuejs.org/zh-cn/)、[vue-router](https://router.vuejs.org/zh-cn/) 、[vue-cli](https://github.com/vuejs/vue-cli) 、[axios](https://github.com/axios/axios) 和 [vant](https://github.com/youzan/vant)，提前了解和学习这些知识会对使用本项目有很大的帮助。
+你需要在本地安装 [node](http://nodejs.org/)。本项目技术栈基于 [ES2015+](http://es6.ruanyifeng.com/)、[vue](https://cn.vuejs.org/index.html)、[vuex](https://vuex.vuejs.org/zh-cn/)、[vue-router](https://router.vuejs.org/zh-cn/) 、[vue-cli](https://github.com/vuejs/vue-cli) 、[axios](https://github.com/axios/axios) 和 [vant](https://github.com/youzan/vant)，提前了解和学习这些知识会对使用本项目有很大的帮助。
 
 
 
@@ -21,6 +21,8 @@
 - router、vuex按模块划分
 
 - 根据命名分包处理，可以分成生产环境和预生产环境
+
+- 打包使用gzip压缩，并进行了相对应的拆包处理
 
 - 使用gulpfile一键打包部署
 ```
