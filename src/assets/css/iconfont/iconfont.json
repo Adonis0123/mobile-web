@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "15808986",
+      "name": "logo",
+      "font_class": "logo",
+      "unicode": "e738",
+      "unicode_decimal": 59192
+    },
+    {
+      "icon_id": "5652429",
+      "name": "上升",
+      "font_class": "shangsheng",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "5652431",
+      "name": "下降",
+      "font_class": "xiajiang",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
       "icon_id": "15743927",
       "name": "手机端-选择-门诊",
       "font_class": "shoujiduan-xuanze-menzhen1-copy",

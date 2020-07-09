@@ -1,7 +1,7 @@
 <!--
  * @Author: Hzh
  * @Date: 2020-07-06 13:36:32
- * @LastEditTime: 2020-07-06 16:08:45
+ * @LastEditTime: 2020-07-09 13:22:31
  * @LastEditors: Hzh
  * @Description:
 -->
@@ -12,18 +12,19 @@
         <router-view :key="routerViewKey" />
       </keep-alive>
     </div>
-    <footer-nav />
+    <!-- <footer-nav /> -->
   </div>
-
 </template>
 
 <script>
-import FooterNav from './components/FooterNav.vue'
+// import FooterNav from './components/FooterNav.vue'
 import { mapGetters } from 'vuex'
 export default {
   name: 'Home',
 
-  components: { FooterNav },
+  components: {
+    // FooterNav
+  },
 
   props: {},
 
@@ -49,10 +50,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  .frame{
-    height: 100%;
-    .single-page{
-      height: calc(100% - 98px);
-    }
+.frame {
+  height: 100%;
+  .single-page {
+    height: calc(100% - 98px);
   }
+}
 </style>

@@ -1,7 +1,7 @@
 /*
  * @Author: Hzh
  * @Date: 2020-06-22 10:12:23
- * @LastEditTime: 2020-07-06 18:18:23
+ * @LastEditTime: 2020-07-09 14:35:13
  * @LastEditors: Hzh
  * @Description:
  */
@@ -23,7 +23,7 @@ import cookie from 'vue-cookie'
 
 // 按需引入
 import {
-  Toast, Search, Tabbar, TabbarItem, Button
+  Toast, Search, Tabbar, TabbarItem, Button, Col, Row, Cell, CellGroup
 } from 'vant'
 
 //  /* vw 兼容适配 */
@@ -38,7 +38,7 @@ import {
 // }
 
 /* 使用vant组件 */
-Vue.use(Toast).use(Search).use(Tabbar).use(TabbarItem).use(Button)
+Vue.use(Toast).use(Search).use(Tabbar).use(TabbarItem).use(Button).use(Col).use(Row).use(Cell).use(CellGroup)
 /* 使用滑动切换页面组件 */
 Vue.use(VueTouch, { name: 'v-touch' })
 VueTouch.config.swipe = {
