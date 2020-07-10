@@ -1,5 +1,4 @@
 
-// template.js
 module.exports = {
   vueTemplate: compoenntName => {
     return `<template>
@@ -7,10 +6,13 @@ module.exports = {
 </template>
 
 <script>
+import { ${compoenntName} } from 'components'
 export default {
-  name: '${compoenntName}',
+  name: '',
 
-  components: {},
+  components: {
+    ${compoenntName}
+  },
 
   mixins: [],
 
@@ -35,8 +37,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.ele {
+  margin: 10px 0;
+}
   .${compoenntName}{
-
+    height: 100%;
+    padding: 0 40px;
   }
 </style>
 `

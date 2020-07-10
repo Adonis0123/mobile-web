@@ -1,17 +1,26 @@
 <!--
  * @Author: Hzh
  * @Date: 2020-07-09 14:14:14
- * @LastEditTime: 2020-07-09 14:58:27
+ * @LastEditTime: 2020-07-10 14:00:35
  * @LastEditors: Hzh
  * @Description:
 -->
 <template>
   <div class="introduce">
+    <van-cell-group title="移动端模板介绍">
+      <van-cell
+        title="主要功能"
+        to="/project-introduction"
+        size="large"
+        is-link
+      />
+    </van-cell-group>
     <van-cell-group :border="false" :title="basicComponents.title">
       <van-cell
         v-for="(item,index) in basicComponents.childs"
         :key="index"
-        :title="item"
+        :title="item.name"
+        :to="item.path"
         size="large"
         is-link
       />
@@ -20,6 +29,7 @@
 </template>
 
 <script>
+import baseCompDetails from '@/router/modules/baseCompDetails.js'
 export default {
   name: 'Introduce',
 
@@ -31,14 +41,10 @@ export default {
 
   data() {
     return {
+      isHover: false,
       basicComponents: {
         title: '基础组件',
-        childs: [
-          'IconSvg 组件',
-          'Loading 等待加载组件',
-          'RequestFail 重新加载组件',
-          'Scroll betterScroll组件'
-        ]
+        childs: []
       }
     }
   },
@@ -47,7 +53,14 @@ export default {
 
   watch: {},
 
-  created() {},
+  created() {
+    baseCompDetails.forEach(item => {
+      this.basicComponents.childs.push({
+        name: item.meta.title,
+        path: item.path
+      })
+    })
+  },
 
   mounted() {},
 
@@ -71,11 +84,15 @@ export default {
     border-radius: 99px;
     transition: background 0.3s;
     margin-bottom: 30px;
+
+    .van-cell__title {
+      padding-left: 20px;
+      color: #323233;
+      font-weight: 500;
+      font-size: 28px;
+    }
     &:active {
       background: #e4e8ee;
-    }
-    &:hover {
-      background: #eef0f4;
     }
   }
 }

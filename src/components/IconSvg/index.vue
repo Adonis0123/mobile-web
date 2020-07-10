@@ -1,5 +1,6 @@
 <!--
-用法：<icon-svg icon-class="name" />
+用法：
+<icon-svg icon-class="name" />
   -->
 <template>
   <svg class="svg-icon" aria-hidden="true">

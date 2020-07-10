@@ -97,6 +97,7 @@ module.exports = {
       .set('http', resolve('src/http'))
       .set('utils', resolve('src/utils'))
       .set('views', resolve('src/views'))
+      .set('introduce', resolve('src/views/introduce/pages'))
   },
   // 配置高于chainWebpack中关于 css loader 的配置
   css: {
